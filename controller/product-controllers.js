@@ -38,9 +38,9 @@ exports.addProduct = async function (req, res, next) {
    const uniqueFilename = new Date().toISOString();
    const cloudinary = require('cloudinary').v2;
    cloudinary.config({
-      cloud_name: 'ericnguyen-cop',
-      api_key: '432788984294521',
-      api_secret: '5PM0MeEyP1Xswb6FXtpp2LGT2YM'
+      cloud_name: 'trantuantrong',
+      api_key: '426257212753388',
+      api_secret: 'xpjjmLAsjx457tJYZ6qi7diHm6s'
    })
    cloudinary.uploader.upload(
       "data:image/png;base64," + (req.file.buffer).toString('base64'),
@@ -79,14 +79,14 @@ exports.editProduct = (req, res) => {
    const newDescription = req.body.info;
 
    if (!req.file) {
-      res.status(401).json({ error: 'Please provide an image' });
+      res.status(401).json({ error: 'Please provide an image...!' });
    }
    const uniqueFilename = new Date().toISOString();
    const cloudinary = require('cloudinary').v2;
    cloudinary.config({
-      cloud_name: 'ericnguyen-cop',
-      api_key: '432788984294521',
-      api_secret: '5PM0MeEyP1Xswb6FXtpp2LGT2YM'
+      cloud_name: 'trantuantrong',
+      api_key: '426257212753388',
+      api_secret: 'xpjjmLAsjx457tJYZ6qi7diHm6s'
    })
    cloudinary.uploader.upload(
       "data:image/png;base64," + (req.file.buffer).toString('base64'),
