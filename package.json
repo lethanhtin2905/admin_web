@@ -24,14 +24,13 @@
     "express-session": "^1.17.1",
     "http-errors": "^1.8.0",
     "jquery": "^3.5.1",
-    "lodash": "^4.17.20",
     "mongoose": "^5.11.3",
     "morgan": "^1.10.0",
     "multer": "^1.4.2",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
-    "sharp": "^0.26.3",
+    "save": "^2.4.0",
     "supervisor": "^0.12.0",
     "uuid": "^8.3.1"
   }
