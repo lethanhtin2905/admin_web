@@ -42,9 +42,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 // Static path
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/category', express.static(path.join(__dirname, 'public')));
-app.use('/store', express.static(path.join(__dirname, 'public')));
+//app.use('/store', express.static(path.join(__dirname, 'public')));
 app.use('/product', express.static(path.join(__dirname, 'public')));
-app.use('/order', express.static(path.join(__dirname, 'public')));
+//app.use('/order', express.static(path.join(__dirname, 'public')));
 app.use('/user', express.static(path.join(__dirname, 'public')));
 app.use('/login', express.static(path.join(__dirname, 'public')));
 
@@ -87,7 +87,7 @@ app.use(function(err, req, res, next) {
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   // render the error page
-  res.status(err.status || 500);
+  res.status(err.status || 500);        
   res.render('error');
 });
 
