@@ -15,7 +15,7 @@ module.exports = function(passport) {
                         return done(null, false, { message: 'Email chưa được đăng ký' });
                     }
                     //console.log("role: ",user);
-                    if (user.role == 0) {
+                    if (user.role == 0 || !user.role) {
                         return done(null, false, { message: 'Tài khoản chưa được cấp quyền' });
                     }
 
