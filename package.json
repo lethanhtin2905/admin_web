@@ -31,7 +31,7 @@
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
-    "sharp": "^0.26.3",
+    "save": "^2.4.0",
     "supervisor": "^0.12.0",
     "uuid": "^8.3.1"
   }

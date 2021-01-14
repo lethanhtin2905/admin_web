@@ -42,7 +42,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 // Static path
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/category', express.static(path.join(__dirname, 'public')));
-//app.use('/store', express.static(path.join(__dirname, 'public')));
+app.use('/store', express.static(path.join(__dirname, 'public')));
 app.use('/product', express.static(path.join(__dirname, 'public')));
 app.use('/order', express.static(path.join(__dirname, 'public')));
 app.use('/user', express.static(path.join(__dirname, 'public')));
