@@ -6,7 +6,7 @@ var homeControllers = require('../controller/home-controllers');
 var productControllers = require('../controller/product-controllers');
 var orderControllers = require('../controller/order-controllers');
 var userControllers = require('../controller/user-controllers');
-//var storeControllers = require('../controller/store-controllers');
+var storeControllers = require('../controller/store-controllers');
 const upload = require('../uploadMiddleware');
 const { ensureAuthenticated } = require('../config/auth');
 
@@ -32,5 +32,10 @@ router.get('/user/autho',ensureAuthenticated, userControllers.AuthoUser);
 router.get('/user/lock',ensureAuthenticated, userControllers.lockUser);
 router.get('/user/unlock',ensureAuthenticated, userControllers.unlockUser);
 router.get('/user/delete/:id',ensureAuthenticated, userControllers.deleteUser);
+
+// Store
+router.get('/store', ensureAuthenticated, storeControllers.displayStore);
+router.post('/store/add',upload.single('image'), storeControllers.addStore);
+router.get('/store/delete/:id', ensureAuthenticated, storeControllers.deleteStore);
 
 module.exports = router;
